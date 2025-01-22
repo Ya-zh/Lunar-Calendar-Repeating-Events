@@ -19,7 +19,7 @@ def generate_calendar(config, years):
         lunar_birthday = person['lunar_birthday']
         lunar_year, lunar_month, lunar_day = map(int, lunar_birthday.split('-'))
 
-        # 计算未来100年的农历生日
+        # 计算未来50年的农历生日
         for year in range(datetime.now().year, datetime.now().year + years):
             lunar_date = Lunar(year, lunar_month, lunar_day)
             solar_date = Converter.Lunar2Solar(lunar_date)
